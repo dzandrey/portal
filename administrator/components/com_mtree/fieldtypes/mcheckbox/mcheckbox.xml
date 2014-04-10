@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="file" version="3.0.0" method="upgrade">
+	<name>checkboxwithimage</name>
+	<caption>Флажок с картинкой</caption>
+	<author>Lee Cher Yeong</author>
+	<creationDate>June 2011</creationDate>
+	<copyright>(C) 2011 Mosets Consulting. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later</license>
+	<authorEmail>mtree@mosets.com</authorEmail>
+	<authorUrl>www.mosets.com</authorUrl>
+	<version>3.0.0</version>
+	<description>Позволяет использовать изображение при выборе флажков.</description>
+	<useElements>1</useElements>
+	<useSize>0</useSize>
+	<taggable>1</taggable>
+	<fileset>
+		<files folder="." target="administrator/components/com_mtree/fieldtypes/checkboxwithimage">
+			<filename>checkboxwithimage.php</filename>
+			<filename>checkboxwithimage.xml</filename>
+			<filename>index.html</filename>
+		</files>
+	</fileset>
+	<config>
+		<fields>
+			<fieldset name="basic">	
+				<field name="images" type="textarea" cols="40" rows="6" default="" label="Картинки" description="Введите адреса картинок, соответствующих элементов, определённых для этого поля. Адреса должны отделяться знаком |. Можно использовать {live_site} для замены mosConfig_live_site. Например: {live_site}/media/media/images/mime-icon-32/zip.png|{live_site}/media/media/images/mime-icon-32/mp3.png"/>
+				<field name="showImages" type="list" default="1" label="Показать картинки" description="Где и нужно ли показывать картинки.">
+					<option value="0">Нет</option>
+					<option value="1">Да</option>
+					<option value="2">Только на сайте</option>
+				</field>
+				<field name="captions" type="textarea" cols="40" rows="6" default="" label="Подписи" description="Подписи указанные около изображения, для краткого описание каждого флажка. Подписи должны быть разделены |."/>
+				<field name="useCaptions" type="list" default="0" label="Показать подписи" description="Включить отображение заголовков.">
+					<option value="0">Нет</option>
+					<option value="1">Да</option>
+					<option value="2">Только в окне редактирования</option>
+				</field>
+				<field name="alts" type="textarea" cols="40" rows="6" default="" label="Альтернатива картинке" description="Альтернативный текст для показа пользователям, у которых в браузере отключены изображения. Будьте кратки и точны. Тексты должны быть разделены |."/>
+				<field name="titles" type="textarea" cols="40" rows="6" default="" label="Заголовок картинки" description="При наведении на картинку будет всплывать подсказка с введённым тут текстом. Тексты заголовков должны быть разделены |."/>
+				<field name="dvOutput" type="list" default="h" label="Способ показа">
+					<option value="ul">Неупорядоченный список</option>
+					<option value="ol">Нумерованный список</option>
+					<option value="h">Горизонтально</option>
+					<option value="v">Вертикально</option>
+				</field>
+				<field name="columns" type="list" default="0" label="Колонки" description="Введите число столбцов, используемых для отображения каждого из флажков в форме редактирования материала. По умолчанию он настроен на автоматическое принятие на основе имеющейся ширины и размера каждого флажка.">
+					<option value="0">Авто</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+	<updateservers>
+		<server type="extension">http://update.mosets.com/mtree/fieldtypes/checkboxwithimage.xml</server>
+	</updateservers>
+</extension>

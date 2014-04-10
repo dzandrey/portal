@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="file" version="3.0.0" method="upgrade">
+	<name>image</name>
+	<caption>Картинка</caption>
+	<author>Lee Cher Yeong</author>
+	<creationDate>June 2012</creationDate>
+	<copyright>(C) 2011-2012  Mosets Consulting. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later</license>
+	<authorEmail>mtree@mosets.com</authorEmail>
+	<authorUrl>www.mosets.com</authorUrl>
+	<version>3.0.0</version>
+	<description>Поле типа изображения принимает GIF, PNG и JPG файл и изменяет его перед сохранением в соответствии со значением, установленным в параметре.</description>
+	<useElements>0</useElements>
+	<useSize>0</useSize>
+	<taggable>0</taggable>
+	<isFile>1</isFile>
+	<fileset>
+		<files folder="." target="administrator/components/com_mtree/fieldtypes/image">
+			<filename>image.php</filename>
+			<filename>image.xml</filename>
+			<filename>index.html</filename>
+		</files>
+	</fileset>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.fld_image.ini</language>
+	</languages>
+	<config>
+		<fields>
+			<fieldset name="basic">
+				<field name="size" type="text" default="0" label="Макс. ширина и высота" description="Введите максимальный размер ширины и высоты конечного размера изображения. Введите 0, чтобы использовать значение, установленное для размера эскиза материала." />
+				<field name="maxFileSize" type="text" default="3145728" label="Макс. размер файла (в байтах)" description="Максимальный размер файла для загрузки в байтах. По умолчанию 3MB (3145728 байт). 0 - безлимитно. Обратите внимание, сервер может иметь максимальный предел загрузки." />
+			</fieldset>
+		</fields>
+	</config>
+	<updateservers>
+		<server type="extension">http://update.mosets.com/mtree/fieldtypes/image.xml</server>
+	</updateservers>
+</extension>

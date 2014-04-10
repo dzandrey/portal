@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="file" version="3.0.0" method="upgrade">
+	<name>videoplayer</name>
+	<caption>Видео плеер</caption>
+	<author>Lee Cher Yeong</author>
+	<creationDate>April 2012</creationDate>
+	<copyright>(C) 2011-2012 Mosets Consulting. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later</license>
+	<authorEmail>mtree@mosets.com</authorEmail>
+	<authorUrl>www.mosets.com</authorUrl>
+	<version>3.0.0</version>
+	<description>Видео плеер позволяет загружать h264 видео файлы и воспроизводить их на сайте с помощью HTML5 видеоплеера. Он будет проигрывать видео используя Flash, если HTML5 не доступно.</description>
+	<useElements>0</useElements>
+	<useSize>0</useSize>
+	<taggable>0</taggable>
+	<isFile>1</isFile>
+	<fileset>
+		<files folder="." target="administrator/components/com_mtree/fieldtypes/videoplayer">
+			<filename>videoplayer.php</filename>
+			<filename>videoplayer.xml</filename>
+			<filename>index.html</filename>
+		</files>
+		<files folder="media" target="media/com_mtree/fieldtypes/videoplayer">
+			<filename>video-js.min.css</filename>
+			<filename>video-js.png</filename>
+			<filename>video-js.swf</filename>
+			<filename>video.min.js</filename>
+			<filename>index.html</filename>
+		</files>
+	</fileset>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.fld_videoplayer.ini</language>
+	</languages>
+	<config>
+		<fields>
+			<fieldset name="basic">
+				<field name="width" type="text" default="640" label="Ширина" />
+				<field name="height" type="text" default="264" label="Высота" />
+				<field name="autoplay" type="radio" default="false" label="Автозапуск">
+					<option value="true">Да</option>
+					<option value="false">Нет</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+	<updateservers>
+		<server type="extension">http://update.mosets.com/mtree/fieldtypes/videoplayer.xml</server>
+	</updateservers>
+</extension>

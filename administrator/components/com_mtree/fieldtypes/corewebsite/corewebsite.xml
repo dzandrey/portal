@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="file" version="3.0.0" method="upgrade">
+	<name>corewebsite</name>
+	<caption>Вебсайт</caption>
+	<author>Lee Cher Yeong</author>
+	<creationDate>June 2011</creationDate>
+	<copyright>(C) 2011 Mosets Consulting. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later</license>
+	<authorEmail>mtree@mosets.com</authorEmail>
+	<authorUrl>www.mosets.com</authorUrl>
+	<version>3.0.0</version>
+	<description></description>
+	<useElements>0</useElements>
+	<useSize>0</useSize>
+	<taggable>0</taggable>
+	<fileset>
+		<files folder="." target="administrator/components/com_mtree/fieldtypes/corewebsite">
+			<filename>corewebsite.php</filename>
+			<filename>corewebsite.xml</filename>
+			<filename>index.html</filename>
+		</files>
+	</fileset>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.fld_corewebsite.ini</language>
+	</languages>
+	<config>
+		<fields>
+			<fieldset name="basic">
+				<field name="openNewWindow" type="radio" default="1" label="В новом окне" description="Открывать ссылку в новом окне.">
+					<option value="0">Нет</option>
+					<option value="1">Да</option>
+				</field>
+				<field name="useMTVisitRedirect" type="radio" default="1" label="Использовать внутренний редирект" description="Использование интернет редиректа направит посетителей на другой сайт через внутренние адреса. Это позволит Mosets Tree отслеживать просмотры и скроет прямые адреса от посетителей.">
+					<option value="0">Нет</option>
+					<option value="1">Да</option>
+				</field>
+				<field name="text" type="text" default="" label="Текст ссылки" description="Используйте этот параметр, чтобы указать текст ссылки. Если оставить пустым, будет отображаться полный адрес как текст ссылки." />
+				<field name="maxUrlLength" type="text" default="60" label="Макс. длина адреса" description="Введите максимальную длину адреса перед обрезкой." />
+				<field name="clippedSymbol" type="text" default="..." label="Символ обрезки" />
+
+				<field name="hideProtocolOutput" type="radio" default="1" label="Скрыть 'http://' при выводе">
+					<option value="0">Нет</option>
+					<option value="1">Да</option>
+				</field>
+				<field name="showGo" type="radio" default="1" label="Показать кнопку Go" description="Кнопка Go будет показана в админ части на странице редактирования материала. Позволяет администратору быстро открыть вебсайт материала.">
+					<option value="0">Нет</option>
+					<option value="1">Да</option>
+				</field>
+				<field name="showSpider" type="radio" default="0" label="Показат кнопку Spider" description="Если да, кнопка Spider будет доступна рядом с полем ввода вебсайта в админ части. При нажатии на кнопку, она будет в фоне проверять заполнение полей МЕТА ключей и МЕТА описания материала">
+					<option value="0">Нет</option>
+					<option value="1">Да</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+	<updateservers>
+		<server type="extension">http://update.mosets.com/mtree/fieldtypes/corewebsite.xml</server>
+	</updateservers>
+</extension>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="file" version="3.0.0" method="upgrade">
+	<name>texteditor</name>
+	<caption>Текстовый редактор</caption>
+	<author>Lee Cher Yeong</author>
+	<creationDate>March 2013</creationDate>
+	<copyright>(C) 2012-2013 Mosets Consulting. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later</license>
+	<authorEmail>mtree@mosets.com</authorEmail>
+	<authorUrl>www.mosets.com</authorUrl>
+	<version>3.0.0</version>
+	<description>Стандартный тип текстового поля с различными настраиваемыми параметрами.</description>
+	<useElements>0</useElements>
+	<useSize>1</useSize>
+	<taggable>0</taggable>
+	<fileset>
+		<files folder="." target="administrator/components/com_mtree/fieldtypes/texteditor">
+			<filename>texteditor.php</filename>
+			<filename>texteditor.xml</filename>
+			<filename>index.html</filename>
+		</files>
+	</fileset>
+	<config>
+		<fields>
+			<fieldset name="basic">
+				<field
+					name="editor"
+					type="plugins"
+					folder="editors"
+					default="tinymce"
+					label="Редактор"
+					required="true"
+					filter="cmd" />
+				<field name="width" type="text" default="100%" label="Ширина" />
+				<field name="height" type="text" default="200px" label="Высота" />
+				<field name="loadButtons" type="radio" default="0" label="Загрузить кнопки" description="Если Да, все кнопки редактора (кроме Разрыв страницы и ЧИТАТЬ) будут загружены.">
+					<option value="0">Нет</option>
+					<option value="1">Да</option>
+				</field>
+			
+			</fieldset>
+		</fields>
+	</config>
+	<updateservers>
+		<server type="extension">http://update.mosets.com/mtree/fieldtypes/texteditor.xml</server>
+	</updateservers>
+</extension>

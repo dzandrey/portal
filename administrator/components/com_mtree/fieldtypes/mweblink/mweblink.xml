@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="file" version="3.0.0" method="upgrade">
+	<name>mweblink</name>
+	<caption>Вебссылка</caption>
+	<author>Lee Cher Yeong</author>
+	<creationDate>June 2011</creationDate>
+	<copyright>(C) 2011 Mosets Consulting. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later</license>
+	<authorEmail>mtree@mosets.com</authorEmail>
+	<authorUrl>www.mosets.com</authorUrl>
+	<version>3.0.0</version>
+	<description></description>
+	<useElements>0</useElements>
+	<useSize>1</useSize>
+	<taggable>0</taggable>
+	<fileset>
+		<files folder="." target="administrator/components/com_mtree/fieldtypes/mweblink">
+			<filename>mweblink.php</filename>
+			<filename>mweblink.xml</filename>
+			<filename>index.html</filename>
+		</files>
+	</fileset>
+	<config>
+		<fields>
+			<fieldset name="basic">
+				<field name="openNewWindow" type="radio" default="1" label="В новом окне" description="Открывать ссылку при нажатии в новом окне.">
+					<option value="0">Нет</option>
+					<option value="1">Да</option>
+				</field>
+				<field name="text" type="text" default="" size="40" label="Текст ссылки" description="Используйте этот параметр, чтобы указать текст ссылки. Если оставить пустым, будет показан полный адрес как текст ссылки. Если указать изображение ниже, это будет использовано для его атрибута ALT."/>
+				<field name="title" type="text" default="" size="40" label="Заголовок ссылки" description="Дополнительный атрибут ссылки в виде всплывающей подсказки при наведении курсора мыши."/>
+				<field name="image" type="text" default="" size="40" label="Картинка ссылки" description="Введите адрес картинки, используемой для ссылки. Можно использовать {live_site} в качестве замены для значения домена вашего сайта. Пример: {live_site}/images/banners/white.png"/>
+				<field name="maxUrlLength" type="text" size="10" default="60" label="Макс. длина адреса" description="Введите максимальную длину адреса перед обрезкой"/>
+				<field name="useInternalRedirect" type="radio" default="0" label="Внутренний редирект" description="Использование внутреннего редиректа будет скрывать фактический адрес назначения и использовать внутренний URL для перенаправления пользователей на фактический URL. Также позволяет отслеживать количество посещений по ссылке. Количество посещений может быть показано на сайте, если параметр ниже 'Показать счётчик' установлен в Да.">
+					<option value="0">Нет</option>
+					<option value="1">Да</option>
+				</field>
+				<field name="showCounter" type="radio" default="1" label="Показать счётчик" description="Показывает количество посещений при нажатии ссылки на сайте. Отслеживание количества посещений доступно только при использовании внутреннего редиректа.">
+					<option value="0">Нет</option>
+					<option value="1">Да</option>
+				</field>
+				<field name="clippedSymbol" type="text" size="10" default="..." label="Символ обрезки"/>
+				<field name="showGo" type="radio" default="0" label="Показать кнопку Go" description="Кнопка Go будет показана в админ части на странице редактирования материала. Позволяет администратору быстро открыть вебсайт материала.">
+					<option value="0">Нет</option>
+					<option value="1">Да</option>
+				</field>
+		
+				<field type="spacer" name="@spacer" label="" description=""/>
+
+				<field name="acceptFTP" type="radio" default="0" label="Принять ссылки FTP" description="Если да, будет включено принятие ссылок по протоколу ftp:// .">
+					<option value="0">Нет</option>
+					<option value="1">Да</option>
+				</field>
+		
+				<field type="spacer" name="@spacer" label="" description=""/>
+		
+				<field name="accessLevel" type="list" default="0" label="Уровень доступа" description="Установите необходимый уровень доступа для показа пользователям этой ссылки.">
+					<option value="0">Общий</option>
+					<option value="1">Зарегистрированные</option>
+				</field>
+				<field name="txtLogin" type="text" default="" size="40" label="Сообщение для входа" description="Если вы установите Уровень доступа для зарегистрированных, это сообщение будет показано гостям."/>
+		
+				<field type="spacer" name="@spacer" label="" description=""/>
+
+				<field name="useNofollow" type="radio" default="0" label="Включить атрибут nofollow" description="Если да, атрибут nofollow будет добавлен во все ссылки, созданные этим полем.">
+					<option value="0">Нет</option>
+					<option value="1">Да</option>
+				</field>
+
+				<field type="spacer" name="@spacer" label="" description=""/>
+
+				<field name="useGA" type="radio" default="0" label="Использовать GA отслеживание" description="Если ваш сайт использует Google Analytics, параметр позволит отслеживать исходящие ссылки через это поле. Пожалуйста, перед использованием убедитесь, что Google Analytics работает на сайте и имеет последнюю версию кода отслеживания.">
+					<option value="0">Нет</option>
+					<option value="1">Да</option>
+				</field>
+				<field name="gaPageTrackDirectory" type="text" default="/outgoing/" size="40" label="GA исходящий каталог" description="Если ваш сайт использует Google Analytics, этот параметр позволяет вводить исходящий каталог, в котором все исходящие клики на этом поле будут записаны. Подробнее: http://www.google.com/support/analytics/bin/answer.py?answer=55527&amp;cbid=1aul57ykjrzdd&amp;src=cb"/>
+			</fieldset>
+		</fields>
+	</config>
+	<updateservers>
+		<server type="extension">http://update.mosets.com/mtree/fieldtypes/mweblink.xml</server>
+	</updateservers>
+</extension>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="file" version="3.0.0" method="upgrade">
+	<name>mtext</name>
+	<caption>Текст</caption>
+	<author>Lee Cher Yeong</author>
+	<creationDate>March 2012</creationDate>
+	<copyright>(C) 2011-2012 Mosets Consulting. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later</license>
+	<authorEmail>mtree@mosets.com</authorEmail>
+	<authorUrl>www.mosets.com</authorUrl>
+	<version>3.0.0</version>
+	<description>Стандартный тип текстового поля с различными настраиваемыми параметрами.</description>
+	<useElements>0</useElements>
+	<useSize>1</useSize>
+	<taggable>0</taggable>
+	<fileset>
+		<files folder="." target="administrator/components/com_mtree/fieldtypes/mtext">
+			<filename>mtext.php</filename>
+			<filename>mtext.xml</filename>
+			<filename>index.html</filename>
+		</files>
+	</fileset>
+	<config>
+		<fields>
+			<fieldset name="basic">
+				<field name="inputType" type="list" default="1" label="Тип ввода" description="Однострочное иои многострочное текстовое поле, размер опции используется для управления шириной и высотой соответствующего поля.">
+					<option value="1">Текстовая строка</option>
+					<option value="2">Текстовая область</option>
+				</field>
+				<field name="maxSummaryChars" type="text" default="55" label="Макс. символов в сводке." description="Введите 0, чтобы показать полный текст, независимо от его длины." />
+				<field name="maxDetailsChars" type="text" default="0" label="Макс. символов в подробности." description="Введите 0, чтобы показать полный текст, независимо от его длины." />
+				<field name="cols" type="list" default="50" label="Колонки" description="Определите ширину колонок текстовой области, если выбрано выше. Определите слева высоту строки текстового поля.">
+					<option value="5">5</option>
+					<option value="10">10</option>
+					<option value="15">15</option>
+					<option value="20">20</option>
+					<option value="25">25</option>
+					<option value="30">30</option>
+					<option value="35">35</option>
+					<option value="40">40</option>
+					<option value="45">45</option>
+					<option value="50">50</option>
+					<option value="55">55</option>
+					<option value="60">60</option>
+					<option value="65">65</option>
+					<option value="70">70</option>
+					<option value="80">80</option>
+					<option value="90">90</option>
+					<option value="100">100</option>
+					<option value="120">120</option>
+				</field>
+				<field name="preserveNewline" type="list" default="1" label="Сохранение строки" description="Если вы используете текстовую область, опция позволит контролировать куда сохранить новую строку вводимого текста.">
+					<option value="1">Только в подробности</option>
+					<option value="2">Только в сводке</option>
+					<option value="3">В оба</option>
+				</field>
+				<field name="parseUrl" type="radio" default="1" label="Parse URL как ссылку в подробности">
+					<option value="0">Нет</option>
+					<option value="1">Да</option>
+				</field>
+				<field name="style" type="text" default="" label="Стиль" description="Вводный элемент по умолчанию в классах CSS 'inputbox text_area'. Можно указать дополнительные стили здесь" />
+			</fieldset>
+		</fields>
+	</config>
+	<updateservers>
+		<server type="extension">http://update.mosets.com/mtree/fieldtypes/mtext.xml</server>
+	</updateservers>
+</extension>

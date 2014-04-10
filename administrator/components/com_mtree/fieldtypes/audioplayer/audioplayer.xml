@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="file" version="3.0.0" method="upgrade">
+	<name>audioplayer</name>
+	<caption>Аудио плеер</caption>
+	<author>Lee Cher Yeong</author>
+	<creationDate>June 2011</creationDate>
+	<copyright>(C) 2011 Mosets Consulting. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later</license>
+	<authorEmail>mtree@mosets.com</authorEmail>
+	<authorUrl>www.mosets.com</authorUrl>
+	<version>3.0.0</version>
+	<description>Аудио плеер позволяет пользователям загружать аудио файлы и играть музыку изнутри страницы материала. Предоставляет базовые функции воспроизведения, такие как воспроизвести, пауза и управление звуком. Стало возможным благодаря http://www.1pixelout.net/code/audio-player-wordpress-plugin/.</description>
+	<useElements>0</useElements>
+	<useSize>0</useSize>
+	<taggable>0</taggable>
+	<isFile>1</isFile>
+	<fileset>
+		<files folder="." target="administrator/components/com_mtree/fieldtypes/audioplayer">
+			<filename>audioplayer.php</filename>
+			<filename>audioplayer.xml</filename>
+			<filename>index.html</filename>
+		</files>
+		<files folder="media" target="media/com_mtree/fieldtypes/audioplayer">
+			<filename>audio-player.js</filename>
+			<filename>player.swf</filename>
+			<filename>index.html</filename>
+		</files>
+	</fileset>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.fld_audioplayer.ini</language>
+	</languages>
+	<config>
+		<fields>
+			<fieldset name="basic">
+				<field name="autoStart" type="radio" default="0" label="Автозапуск" description="Автоматически запускать плеер и проигрывать трек.">
+					<option value="0">Нет</option>
+					<option value="1">Да</option>
+				</field>
+				<field name="displayfilename" type="radio" default="1" label="Показать название" description="Отображение названия аудиофайла ниже плеера.">
+					<option value="0">Нет</option>
+					<option value="1">Да</option>
+				</field>
+				<field name="loop" type="radio" default="0" label="Повторение" description="Трек будет повторяться неопределённое время">
+					<option value="0">Нет</option>
+					<option value="1">Да</option>
+				</field>
+				<field name="textColour" type="text" default="" label="Цвет текста" />
+				<field name="sliderColour" type="text" default="" label="Цвет слайдера" />
+				<field name="loaderColour" type="text" default="" label="Цвет загрузки" />
+				<field name="trackColour" type="text" default="" label="Цвет трека" />
+				<field name="borderColour" type="text" default="" label="Цвет границы" />
+				<field name="backgroundColour" type="text" default="" label="Цвет фона" />
+				<field name="leftBackgroundColour" type="text" default="" label="Левый цвет фона" />
+				<field name="rightBackgroundColour" type="text" default="" label="Правый цвет фона" />
+				<field name="rightBackgroundHoverColour" type="text" default="" label="Правый цвет фона (при наведении)" />
+				<field name="leftIconColour" type="text" default="" label="Цвет левой иконки" />
+				<field name="rightIconColour" type="text" default="" label="Цвет правой иконки" />
+				<field name="rightIconHoverColour" type="text" default="" label="Цвет правой иконки (при наведении)" />
+			</fieldset>
+		</fields>
+	</config>
+	<updateservers>
+		<server type="extension">http://update.mosets.com/mtree/fieldtypes/audioplayer.xml</server>
+	</updateservers>
+</extension>

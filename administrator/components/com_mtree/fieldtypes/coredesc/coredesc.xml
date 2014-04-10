@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="file" version="3.0.0" method="upgrade">
+	<name>coredesc</name>
+	<caption>Описание</caption>
+	<author>Lee Cher Yeong</author>
+	<creationDate>June 2011</creationDate>
+	<copyright>(C) 2011 Mosets Consulting. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later</license>
+	<authorEmail>mtree@mosets.com</authorEmail>
+	<authorUrl>www.mosets.com</authorUrl>
+	<version>3.0.0</version>
+	<description></description>
+	<useElements>0</useElements>
+	<useSize>0</useSize>
+	<taggable>0</taggable>
+	<fileset>
+		<files folder="." target="administrator/components/com_mtree/fieldtypes/coredesc">
+			<filename>coredesc.php</filename>
+			<filename>coredesc.xml</filename>
+			<filename>index.html</filename>
+		</files>
+	</fileset>
+	<config>
+		<fields>
+			<fieldset name="basic">
+				<field name="summaryChars" type="text" default="255" label="Количество символов сводки" />
+				<field name="maxChars" type="text" default="3000" label="Макс. символов" description="Максимальное количество символов, разрешённых в этом поле. Описание выше этого значения будет удалено."/>
+				<field name="stripSummaryTags" type="radio" default="1" label="Удалить все теги HTML в сводке" description="Если да, будут удалены все теги, которые потенциально могут повлиять на просмотр списка материалов.">
+					<option value="0">Нет</option>
+					<option value="1">Да</option>
+				</field>
+				<field name="convertSpecialCharsInSummary" type="radio" default="1" label="Использовать HTML сущности в сводке" description="Если да, будет конвертировать специальные символы, такие как амперсанд, цитаты, меньше (&lt;), больше (&gt;) в HTML сущности в сводке.">
+					<option value="0">Нет</option>
+					<option value="1">Да</option>
+				</field>
+				<field name="stripDetailsTags" type="radio" default="1" label="Удалить все теги HTML в подробности" description="Если да, будут удалены все теги, кроме указаных в 'Разрешенные теги'.">
+					<option value="0">Нет</option>
+					<option value="1">Да</option>
+				</field>
+				<field name="parseUrl" type="radio" default="1" label="Parse URL как ссылку в подробности">
+					<option value="0">Нет</option>
+					<option value="1">Да</option>
+				</field>
+
+				<field name="stripAllTagsBeforeSave" type="radio" default="1" label="Удаляет все теги HTML перед сохранением в базу данных" description="Если WYSYWIG редактор включен на сайте, эта функция позволит вам лишить любого потенциально опасного кода. Вы можете позволить некоторые теги в поле описания, укажите их ниже.">
+					<option value="0">Нет</option>
+					<option value="1">Да</option>
+				</field>
+				<field name="allowedTags" type="text" default="u,b,i,a,ul,li,pre,blockquote,strong,em" label="Разрешённые теги" description="Введите названия тегов, разделяя запятыми. Этот параметр позволит вам принять HTML-теги, даже если вы включите удаление всех HTML тегов выше." />
+				<field name="parseMambots" type="radio" default="0" label="Parse мамботам" description="Включение этого будет разбирать мамботам коды в поле описания">
+					<option value="0">Нет</option>
+					<option value="1">Да</option>
+				</field>
+				<field name="showReadMore" type="radio" default="0" label="Показывать &quot;Подробнее...&quot;" description="Show &quot;Read More..&quot; if a description text clipped in Summary View.">
+					<option value="0">Нет</option>
+					<option value="1">Да</option>
+				</field>
+				<field name="whenReadMore" type="list" default="0" label="Когда показывать &quot;Подробнее..&quot;" description="This allow you to set when to show the &quot;Read More..&quot; link.">
+					<option value="0">Когда описание обрезается</option>
+					<option value="1">Всегда</option>
+				</field>
+				<field name="txtReadMore" type="text" default="Подробнее..." label="Текст подробнее" description="Введите текст &quot;Подробнее..&quot;." />
+			</fieldset>
+		</fields>
+	</config>
+	<updateservers>
+		<server type="extension">http://update.mosets.com/mtree/fieldtypes/coredesc.xml</server>
+	</updateservers>
+</extension>

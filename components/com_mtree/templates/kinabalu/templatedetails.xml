@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="template" client="site">
+	<name>kinabalu</name>
+	<creationdate>December 2012</creationdate>
+	<author>Mosets</author>
+	<copyright>This template is copyrighted to Mosets Consulting.</copyright>
+	<authoremail>mtree@mosets.com</authoremail>
+	<authorurl>http://www.mosets.com/tree/</authorurl>
+	<version>3.0</version>
+	<description>Шаблон для Mosets Tree 3.0 по умолчанию.</description>
+	<config>
+		<fields>
+			<fieldset name="basic">
+				<field type="spacer" default="" label="Индекс" description="" class="text" />
+				<field name="numOfColumns" type="list" default="2" label="Кол-во колонок">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+				</field>
+				<field name="numOfSubcatsToDisplay" type="list" default="3" label="Кол-во подкатегорий">
+					<option value="0" />
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="9999">Все</option>
+				</field>
+				<field name="numOfLinksToDisplay" type="list" default="0" label="Количество материалов под верхними категориями" description="Количество материалов, показанных под каждой категорией верхнего уровня">
+					<option value="0" />
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+					<option value="15">15</option>
+					<option value="30">30</option>
+					<option value="-1">Все</option>
+				</field>
+				<field name="displayIndexCatCount" type="radio" default="0" label="Показать кол-во категорий" description="Если да, будет показано общее количество категорий помимо всех категорий верхнего уровня в индексе.">
+					<option value="1">Да</option>
+					<option value="0">Нет</option>
+				</field>
+				<field name="displayIndexListingCount" type="radio" default="1" label="Показать кол-во материалов" description="Если да, будет показано общее количество материалов помимо всех категорий верхнего уровня в индексе.">
+					<option value="1">Да</option>
+					<option value="0">Нет</option>
+				</field>
+				<field name="displayCatDesc" type="radio" default="0" label="Показать описание категории" description="Если да, покажет описание для каждой категории под её заголовком на странице индекса.">
+					<option value="1">Да</option>
+					<option value="0">Нет</option>
+				</field>
+				<field name="displayAlphaIndex" type="radio" default="1" label="Показать алфавит" description="Алфавитный указатель показывает алфавит в верхней части страницы Индекса чтобы обеспечить быстрый доступ к материалам и категориям, которые начинаются с конкретной буквы.">
+					<option value="1">Да</option>
+					<option value="0">Нет</option>
+				</field>
+				<field name="displayIndexCatImage" type="radio" default="0" label="Показать картинки категории" description="Если да, покажет изображение (если доступно) категории верхнего уровня рядом с её названием.">
+					<option value="1">Да</option>
+					<option value="0">Нет</option>
+				</field>
+				<field type="spacer" default="" label="Подкатегории" description="" class="text" />
+				<field name="displaySubcatsCatCount" type="radio" default="0" label="Показать количество категорий">
+					<option value="1">Да</option>
+					<option value="0">Нет</option>
+				</field>
+				<field name="displaySubcatsListingCount" type="radio" default="1" label="Показать количество материалов">
+					<option value="1">Да</option>
+					<option value="0">Нет</option>
+				</field>
+
+				<field type="spacer" default="" label="Страница деталей материала" description="" class="text" />
+				<field name="listingDetailsStyle" type="list" default="1" label="Стиль подробностей материала" description="Описание стилей можно посмотреть на офф сайте.">
+					<option value="1">Стиль по умолчанию</option>
+					<option value="2">Стиль 2</option>
+					<option value="3">Стиль 3</option>
+					<option value="4">Стиль 4</option>
+					<option value="5">Стиль 5</option>
+					<option value="6">Стиль 6</option>
+					<option value="7">Стиль 7</option>
+					<option value="8">Стиль 8</option>
+				</field>
+				<field name="skipFirstImage" type="radio" default="0" label="Пропустить первое изображение" description="По умолчанию, первое изображение используется в качестве эскизов и основных графических представителей материала. Если Да, пропустит это первое изображение и покажет второе и далее в страницу подробностей материала.">
+					<option value="1">Да</option>
+					<option value="0">Нет</option>
+				</field>
+				<field name="showBigImage" type="radio" default="1" label="Показать большую картинку" description="Если да, будет показана первая картинка материала в среднем размере, а другие в малом/эскизном размере.">
+					<option value="1">Да</option>
+					<option value="0">Нет</option>
+				</field>
+				<field name="limitDetailsViewToRegistered" type="radio" default="0" label="Ограничение просмотра подробностей Зарегистрированными пользователями">
+					<option value="1">Да</option>
+					<option value="0">Нет</option>
+				</field>
+				<field name="listingNameLink" type="list" default="1" label="Ссылка названия материала." description="По умолчанию, при нажатии на название материала, приведёт пользователя к подробным данным материала. Этот параметр позволяет отключить ссылку или переадресовать на сайт материала. Если вы переадресуете материал на сайт, убедитесь, что установили поле вебсайт обязательным для заполнения.">
+					<option value="1">Просмотр подробностей</option>
+					<option value="4">Просмотр подробностей или вебсайт (если доступно)</option>
+					<option value="2">Вебсайт материала</option>
+					<option value="3">Вебсайт материала (в новом окне)</option>
+					<option value="0">Ссылки нет</option>
+				</field>
+				<field name="numOfColumnsInDetailsView" type="list" default="1" label="Колонки доп. полей" description="Количество столбцов для отображения данных этих полей в подробности.">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+				</field>
+				
+				<field type="spacer" default="" label="Сводка материала" description="" class="text" />
+				<field name="useFeaturedHighlight" type="radio" default="1" label="Выделить рекомендуемый материал" description="Использование выделения будет отображать границы и разные цвета фона рекомендуемого материала в сводке.">
+					<option value="1">Да</option>
+					<option value="0">Нет</option>
+				</field>
+				<field name="numOfListingColumnsInSummaryView" type="list" default="1" label="Колонки материала" description="Количество колонок, использующихся для показа материалов в сводке.">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+				</field>
+				<field name="numOfColumnsInSummaryView" type="list" default="3" label="Колонки доп. полей" description="Количество столбцов для отображения данных этих полей в сводке.">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+				</field>
+				<field name="showActionLinksInSummary" type="radio" default="0" label="Показать ссылки на действия" description="Если да, покажет ссылки на действия в сводке, например: Добавить отзыв, Рекомендовать, печатать, обратится к Владельцу, Посетить, Пожаловаться, Материалы владельца и карты.">
+					<option value="1">Да</option>
+					<option value="0">Нет</option>
+				</field>
+				<field name="showImageInSummary" type="radio" default="1" label="Показать картинку" description="Если да, будет показана первая картинка материала в сводке.">
+					<option value="1">Да</option>
+					<option value="0">Нет</option>
+				</field>
+				<field name="imageDirectionListingSummary" type="radio" default="left" label="Положение картинки">
+					<option value="left">Слева</option>
+					<option value="right">Справа</option>
+				</field>
+				<field name="showFillerImage" type="radio" default="1" label="Показать наполнитель картинки" description="Если да, наполнитель картинки будет показан в сводке, когда в материалах нет загруженных картинок.">
+					<option value="1">Да</option>
+					<option value="0">Нет</option>
+				</field>
+				<!-- <field type="spacer" default="" label="List Alpha" description="" class="text" /> -->
+				<field type="spacer" default="" label="Другое" description="" class="text" />
+				<field name="onlyShowRootLevelCatInListalpha" type="radio" default="0" label="Показать только корневые категории в алфавите" description="Если у вас большое количество категорий, включение данной функции будет уменьшать количество категорий показанных в алфавите, показывая только категории корневого уровня.">
+					<option value="1">Да</option>
+					<option value="0">Нет</option>
+				</field>
+				<field name="displayAddressInOneRow" type="radio" default="1" label="Показать адрес связанных полей в строку" description="Для того чтобы эта функция работала правильно, вам необходимо опубликовать поле 'Адрес'">
+					<option value="1">Да</option>
+					<option value="0">Нет</option>
+				</field>
+				
+			</fieldset>
+		</fields>
+	</config>
+</extension>

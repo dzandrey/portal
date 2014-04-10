@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="file" version="3.0.0" method="upgrade">
+	<name>mfile</name>
+	<caption>Файл</caption>
+	<author>Lee Cher Yeong</author>
+	<creationDate>June 2011</creationDate>
+	<copyright>(C) 2011 Mosets Consulting. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later</license>
+	<authorEmail>mtree@mosets.com</authorEmail>
+	<authorUrl>www.mosets.com</authorUrl>
+	<version>3.0.0</version>
+	<description>Файловое поле может принимать любые типы загружаемых файлов. Вы можете выбрать для ограничения расширения файлов в параметре настройки.</description>
+	<useElements>0</useElements>
+	<useSize>0</useSize>
+	<taggable>0</taggable>
+	<isFile>1</isFile>
+	<fileset>
+		<files folder="." target="administrator/components/com_mtree/fieldtypes/mfile">
+			<filename>mfile.php</filename>
+			<filename>mfile.xml</filename>
+			<filename>index.html</filename>
+		</files>
+	</fileset>
+	<config>
+		<fields>
+			<fieldset name="basic">
+				<field name="fileExtensions" type="textarea" default="gif|png|jpg|jpeg|pdf|zip" label="Разрешённые типы файлов" description="Введите допустимый тип расширения файла для этого поля. Если у вас более одного расширения, отделяйте их знаком '|'. Пример: 'gif|png|jpg|jpeg' или 'pdf', без кавычек. Не начинайте и не заканчивайте список этим символом." />
+				<field name="maxSize" type="text" default="10485760" label="Максимальный размер (в байтах)" description="Максимальный размер для загружаемых файлов. По умолчанию 10MB (10485760 байт). 0 - безлимитно. Обратите внимание, сервер может иметь максимальный предел загрузки." />
+				<field name="useImage" type="text" default="" label="Картинка" description="Введите адрес картинки для использования как ссылки на файл. Можно использовать {live_site} в качестве замены для значения домена сайта. Например: {live_site}/images/save_f2.png" />
+				<field name="showText" type="text" default="" label="Текст" description="Введите текст для кнопки скачивания." />
+				<field name="showFilename" type="radio" default="1" label="Показать название файла" description="Позволяет скрывать ссылку с названием файла">
+					<option value="0">Нет</option>
+					<option value="1">Да</option>
+				</field>
+				<field name="showCounter" type="radio" default="1" label="Показать подсчёт">
+					<option value="0">Нет</option>
+					<option value="1">Да</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+	<updateservers>
+		<server type="extension">http://update.mosets.com/mtree/fieldtypes/mfile.xml</server>
+	</updateservers>
+</extension>

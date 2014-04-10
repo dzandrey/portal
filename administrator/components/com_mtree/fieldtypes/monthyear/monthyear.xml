@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="file" version="3.0.0" method="upgrade">
+	<name>monthyear</name>
+	<caption>Месяц и год</caption>
+	<author>Lee Cher Yeong</author>
+	<creationDate>June 2011</creationDate>
+	<copyright>(C) 2011 Mosets Consulting. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later</license>
+	<authorEmail>mtree@mosets.com</authorEmail>
+	<authorUrl>www.mosets.com</authorUrl>
+	<version>3.0.0</version>
+	<description>Похожее на дату поле, только месяц и год.</description>
+	<useElements>0</useElements>
+	<useSize>0</useSize>
+	<taggable>0</taggable>
+	<fileset>
+		<files folder="" target="administrator/components/com_mtree/fieldtypes/monthyear">
+			<filename>monthyear.php</filename>
+			<filename>monthyear.xml</filename>
+			<filename>index.html</filename>
+		</files>
+	</fileset>
+	<config>
+		<fields>
+			<fieldset name="basic">
+				<field name="startYear" type="text" default="" label="Начальный год" description="Введите начальный год или ранний год доступный для выбора. Если оставить пустым, по умолчанию будет 70 лет назад от текущего года."/>
+				<field name="endYear" type="text" default="" label="Конечный год" description="Введите последний год или доступный для выбора. Если оставить пустым, будет использоваться текущий год."/>
+				<field name="dateFormat" type="text" default="%M %Y" label="Формат даты" description="Формат даты основан на http://php.net/strftime"/>
+			</fieldset>
+		</fields>
+	</config>
+	<updateservers>
+		<server type="extension">http://update.mosets.com/mtree/fieldtypes/monthyear.xml</server>
+	</updateservers>
+</extension>
+
