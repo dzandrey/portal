@@ -219,7 +219,7 @@ if( $this->show_actions_rating_fav ) {
          if($this->my->id > 0) { 
 		$this->plugin( 'ahrefreview', $this->link, array("rel"=>"nofollow", 'data-colorbox'=>true, 'class'=> 'colorbox') ); 
          } else {
-             echo '<div>Для того что бы оставить комментарий Вам необходимо <a href="index.php?option=com_users&view=login">войти</a> на сатй</div>';
+             echo '<div>Для того что бы оставить комментарий Вам необходимо <a class="login" href="index.php?option=com_users&view=login">войти</a> на сатй</div>';
          }
 		$this->plugin( 'ahrefrecommend', $this->link, array("rel"=>"nofollow") );	
 		$this->plugin( 'ahrefprint', $this->link, array("rel"=>"nofollow") );

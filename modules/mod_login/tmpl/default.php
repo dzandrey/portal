@@ -19,11 +19,15 @@ JHtml::_('behavior.keepalive');
 <form action="<?php echo JRoute::_('index.php', true, $params->get('usesecure')); ?>" method="post" id="login-form">
     <div class="login-greeting">
 <?php if ($params->get('greeting')) : ?>
-	<?php if($params->get('name') == 0) : {
-		echo JText::sprintf('MOD_LOGIN_HINAME', htmlspecialchars($user->get('name')));
+        <span class="user_name"><a href="<?php echo JRoute::_('index.php?option=com_users&task=profile.edit&user_id='.(int) $user->get('id'));?>">
+	
+	<?php 
+        if($params->get('name') == 0) : {
+		echo $user->get('name');
 	} else : {
-		echo JText::sprintf('MOD_LOGIN_HINAME', htmlspecialchars($user->get('username')));
+		echo $user->get('username');
 	} endif; ?>
+           </a></span>
 <?php endif; ?>
 		<input type="submit" name="Submit" class="button" value="<?php echo JText::_('JLOGOUT'); ?>" />
 		<input type="hidden" name="option" value="com_users" />
@@ -35,6 +39,8 @@ JHtml::_('behavior.keepalive');
 <?php else : ?>
     <a href="" class="loginaction button"><?php echo JText::_('JLOGIN');  ?></a>
 <div class="login-form hidden">
+   
+
 <form action="<?php echo JRoute::_('index.php', true, $params->get('usesecure')); ?>" method="post" id="login-form" >
 	<?php if ($params->get('pretext')): ?>
 		<div class="pretext">

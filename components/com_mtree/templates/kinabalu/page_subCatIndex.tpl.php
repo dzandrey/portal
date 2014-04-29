@@ -84,7 +84,7 @@ if (isset($this->cat_allow_submission) && $this->cat_allow_submission && $this->
  <script type="text/javascript">
      $('.muljag').on('click', function(e){
          e.preventDefault();
-         $.colorbox({html:'<div>Для того что бы оставить комментарий Вам необходимо <a href="index.php?option=com_users&view=login">войти</a> на сатй</div>'});
+         $.colorbox({html:'<div>Для того что бы добавить материал Вам необходимо <a href="index.php?option=com_users&view=login">войти</a> на сатй</div>'});
      })
  </script>
 </div>

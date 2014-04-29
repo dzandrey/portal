@@ -35,7 +35,10 @@ foreach ($fieldsets as $group => $fieldset): // Iterate through the form fieldse
 			<?php elseif (JHtml::isRegistered('users.'.$field->type)):?>
 				<?php echo JHtml::_('users.'.$field->type, $field->value);?>
 			<?php else:?>
-				<?php echo JHtml::_('users.value', $field->value);?>
+			
+                        <?php $path = JURI::root().'media'.DS.'plg_user_profilepicture'.DS.'images'.DS;
+                              $path .=    $field->value == '' ? ('filler'.DS.'50.png') : '200'.DS; ?>
+				<img src="<?php echo $path.$field->value;?>" alt="<?php echo $field->fieldname; ?>" />
 			<?php endif;?>
 		</dd>
 		<?php endif;?>

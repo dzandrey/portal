@@ -18,6 +18,11 @@ textarea {
     color: #222;
 }
 
+input[readonly="readonly"] {
+    background: #ddd;
+    color: #777;
+}
+
 html {
     font-size: 1em;
     line-height: 1.4;
@@ -78,6 +83,9 @@ video {
  */
 
 
+.item-page.edit label {
+    display: block;
+}
 
 legend {
     margin-bottom: 20px;
@@ -210,6 +218,10 @@ Main container
 .login-box {
     float:right;
     position: relative;
+}
+
+.login-box .user_name {
+    margin-right: 10px;
 }
 
 .login-form {
@@ -391,7 +403,8 @@ catalog
     text-align: center;
     margin: 0 2% 2% 0;
     padding: 1%;
-    height: auto;
+    height: 180px;
+    overflow: hidden;
     vertical-align: top;
     position: relative;
 }
@@ -640,6 +653,22 @@ footer .menu li a:hover {
     padding: 4px 12px;
     text-align: center;
     vertical-align: middle;
+}
+
+.actions_button a.login, 
+.actions_button a.login:hover {
+    background: none;
+    margin: 0;
+    border: none;
+    color: #0088CC;
+    text-shadow: none;
+    padding: 0;
+    display: inline;
+    box-shadow: none;
+    vertical-align: bottom;
+}
+.actions_button a.login:hover {
+    text-decoration: underline;
 }
 
 .actions_button a:hover,

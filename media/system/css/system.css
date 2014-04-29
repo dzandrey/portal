@@ -21,14 +21,13 @@
 }
 
 #system-message > dd > ul {
-	color: #0055BB;
-	background-position: 4px top;
-	background-repeat: no-repeat;
-	margin-bottom: 10px;
-	list-style: none;
-	padding: 10px;
-	border-top: 3px solid #84A7DB;
-	border-bottom: 3px solid #84A7DB;
+    color: #fff;
+    background-position: 6px center;
+    background-repeat: no-repeat;
+    margin-bottom: 10px;
+    list-style: none;
+    padding: 10px;
+    border: 3px solid #C3D2E5;
 }
 
 #system-message > dd > ul > li {
@@ -37,8 +36,8 @@
 
 /* System Standard Messages */
 #system-message > .message > ul {
-	background-color: #C3D2E5;
-	background-image: url(../images/notice-info.png);
+	background-color: #51A351;
+        border-radius: 5px;
 }
 
 /* System Error Messages */
